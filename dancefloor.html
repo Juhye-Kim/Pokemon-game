@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PocketMon</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic&family=Russo+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="src/class/DancerClass.js"></script>
+  <script src="src/class/BlinkyDancerClass.js"></script>
+  <script src="src/class/ToTopDancer.js"></script>
+  <script src="src/class/LazyDancer.js"></script>
+</head>
+
+<body>
+  <audio src="bgms/guidepost.mp3" autoplay></audio> 
+  <div class="cursor"></div>
+  <section id="game">
+    <section id="left-section">
+      <button class="big-btn stop-btn">SAVE</button>
+      <div class="small-btns">
+        <button class="small-btn top-btn">▲</button>
+        <div class="samll-btn left-right-btn">
+          <button class="small-btn left-btn">◀</button>
+          <button class="small-btn right-btn">▶</button>
+        </div>
+        <button class="small-btn bottom-btn">▼</button>
+      </div>
+    </section>
+
+    <section id="main-section">
+      <div id="main-game" class="theme-forest"></div>
+      <div id="main-info">
+        <div id="bottom-info">
+          <img id="profile-img" src="images/jiwoo.png"></img>
+          <div id="level">
+            <span id="level-text">Level 1</span>
+            <span id="user-id">USER</span>
+            <progress id="level-gauge" data-label="EXP 0/100" value="0" max="100"></progress>
+          </div>
+        </div>
+        <div id="top-info">
+          <div id="pocketmon-info">
+            <img id="pocketmon-info-img" src="images/pikachu.png"></img>
+            <span id="pocketmon-info-num">0</span>
+          </div>
+          <div id="pocketball-info">
+            <img id="pocketball-info-img" src="images/pocketball.png"></img>
+            <span id="pocketball-info-num">20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="right-section">
+      <div class="small-btns">
+        <button class="small-btn top-btn">▲</button>
+        <div class="samll-btn left-right-btn">
+          <button class="small-btn left-btn">◀</button>
+          <button class="small-btn right-btn">▶</button>
+        </div>
+        <button class="small-btn bottom-btn">▼</button>
+      </div>
+      <button class="big-btn start-btn">START</button>
+    </section>
+    <script src="src/class/init.js"></script>
+</body>
+</html>
