@@ -1,13 +1,11 @@
 ## **한 줄 소개 🕹**
 
----
 
 포켓볼을 주워 포켓몬을 잡아 경험치를 쌓고, 레벨을 올리는 게임이다. 
 
 
 ## **주요 기능**
 
----
 
 #### **1\. 로그인 화면**
 
@@ -37,7 +35,6 @@ Local Storage에 ID, 레벨, 경험치, 잡은 포켓몬수, 포켓볼 수에 �
 
 ## **구현 과정**
 
----
 
 #### **1\. 기획**
 
@@ -53,13 +50,11 @@ Local Storage에 ID, 레벨, 경험치, 잡은 포켓몬수, 포켓볼 수에 �
 
 이틀 정도밖에 시간이 남지 않아 우선순위를 정해서 가장 필요한 기능부터 구현해야겠다는 생각이 들었고, 바로 구현할 수 있을 것 같은 기능들부터 차례로 bare, advanced, nightmare 라고 이름을 붙여 단계를 정하고 하나씩 완성해나갔다.
 
----
 
 #### **2\. 와이어 프레임 설계**
 
 전체적인 틀은 닌텐도 스위치와 비슷하게 구성하고, 내부 화면(main-section)에서 게임을 할 수 있도록 설계했다. 일러스트를 이용해 와이어 프레임을 완성했다. 이후 배경과 캐릭터를 추가해 실제 크기를 확인하고, 완성된 모습을 대략적으로 시각화해보았다.
 
----
 
 #### **3\. HTML/CSS, Javascript**
 
@@ -82,7 +77,7 @@ Local Storage에 ID, 레벨, 경험치, 잡은 포켓몬수, 포켓볼 수에 �
 <audio src="bgms/guidepost.mp3" autoplay></audio>
 ```
 
-****CSS -**transition**
+CSS -**transition**
 
 포켓몬들이 잡히면 화면에서 사라지는데, 이 때 갑자기 사라지기보다는 fadeout되는 느낌으로 스르륵..하고 사라졌으면 좋겠다고 생각해서 CSS에서 [transition](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 속성을 추가했다. 클릭된 포켓몬 객체의 classList에만 hidden 클래스가 추가되도록 해 클릭 시 transition이 동작되도록 했다. transition에는 애니메이션 속도와 실행시간을 설정하는 속성이 있어서, 투명도인 opacity를 적절히 낮추는 식으로 페이드아웃 효과를 낼 수 있었다.
 
@@ -94,7 +89,7 @@ Local Storage에 ID, 레벨, 경험치, 잡은 포켓몬수, 포켓볼 수에 �
 }
 ```
 
-****CSS, JS -**cursor 이미지로 바꾸기**
+CSS, JS -**cursor 이미지로 바꾸기**
 
 
 사실 커서를 이미지로 바꾼다기 보다는, 이미지가 배경으로 설정된 <div> 요소 하나가 마우스의 좌표를 쫒아다니도록 했다. 우선 요소에 마우스 커서가 올라갔을 때 보여줄 모양을 지정하는 cursor 속성의 값을 [cursor : none](https://developer.mozilla.org/ko/docs/Web/CSS/cursor) 으로 해서 원래 커서는 보이지 않게해주었다. 그리고 50\*50크기의 <div>에 cursor라는 클래스명을 붙이고 아래와 같이 속성을 지정해주었다.
